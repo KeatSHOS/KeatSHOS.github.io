@@ -1,4 +1,4 @@
 setTimeout(function() {
   alert(1);
-}, 10000);
+}, 5000);
 
